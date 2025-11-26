@@ -1,0 +1,86 @@
+{
+    "date_ranges": {
+        "train": {
+            "start": "2022-01-01",
+            "end": "2025-10-22",
+            "rows": 1162876
+        },
+        "val": {
+            "start": "2022-01-01",
+            "end": "2025-10-22",
+            "rows": 250380
+        },
+        "test": {
+            "start": "2022-01-01",
+            "end": "2025-10-22",
+            "rows": 248989
+        }
+    },
+    "models": {
+        "metadata": {
+            "report_generated_at_utc": "2025-11-06 01:10:10.104512",
+            "script_version": "v6.0",
+            "tensorflow_version": "2.20.0"
+        },
+        "data_sequences": {
+            "train_sequences": 1112716,
+            "val_sequences": 239580,
+            "test_sequences": 238249,
+            "total_sequences": 1590545,
+            "data_utilization_pct": 95.68655643421998
+        },
+        "model_version": "v6.0",
+        "architecture": "GRU",
+        "n_features": 30,
+        "target_column": "NDVI_mean",
+        "parameters": {
+            "sequence_length": 60,
+            "forecast_horizon": 1,
+            "batch_size": 256,
+            "epochs": 100,
+            "learning_rate": 0.0001,
+            "gru_units": [
+                256,
+                128,
+                64
+            ],
+            "dense_units": 64,
+            "patience": 20,
+            "dropout_rate": 0.2
+        },
+        "training_time_seconds": 19685.88,
+        "best_validation_metrics": {
+            "val_loss_mse": 0.001292,
+            "val_mae": 0.023992
+        },
+        "training_dynamics": {
+            "best_epoch": 99,
+            "best_epoch_gap_percent": -74.22204443063973,
+            "train_reduction_percent": 97.58879274956405,
+            "val_reduction_percent": 90.06801452515249,
+            "training_stable": false,
+            "overfitting_diagnosis": "excellent"
+        },
+        "test_metrics_scaled": {
+            "mse": 0.00123,
+            "mae": 0.023607
+        },
+        "test_metrics_unscaled": {
+            "mean_error": 0.00249997316802577,
+            "mae": 0.022369311226468597,
+            "rmse": 0.028570153514327075,
+            "r2_score": 0.9822993361342675,
+            "median_ae": 0.018391385674476624,
+            "p95_error": 0.05480782985687235
+        }
+    },
+    "data_quality_report": {
+        "total_rows": 1662245,
+        "total_fields": 1195,
+        "date_range": [
+            "2022-01-01 00:00:00",
+            "2025-10-22 00:00:00"
+        ],
+        "issues_found": []
+    }
+}
